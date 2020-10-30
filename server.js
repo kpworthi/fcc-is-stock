@@ -12,12 +12,23 @@ var runner            = require('./test-runner');
 
 var app = express();
 
+app.use(helmet());
+
 app.use('/public', express.static(process.cwd() + '/public'));
+
+/*
+app.use(function(req, res, next){
+  if (req)
+    console.log('Request received from ', req.connection.remoteAddress);
+  next(req, res);
+})*/
 
 app.use(cors({origin: '*'})); //For FCC testing purposes only
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.set('trust proxy', true);
 
 //Index page (static HTML)
 app.route('/')

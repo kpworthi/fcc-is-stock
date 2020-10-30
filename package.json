@@ -1,6 +1,6 @@
 {
 	"name": "stock-chock",
-	"version": "0.1.0",
+	"version": "0.3.0",
 	"description": "FCC assignment to create a stock price-checker",
 	"main": "server.js",
 	"scripts": {
@@ -11,7 +11,7 @@
 		"cors": "^2.8.1",
 		"body-parser": "^1.15.2",
 		"chai": "^3.5.0",
-		"mongodb": "^2.2.16",
+		"mongodb": "^3.6.0",
 		"chai-http": "^3.0.0",
 		"mocha": "^3.2.0",
 		"zombie": "^5.0.5",
@@ -26,7 +26,6 @@
 	},
 	"keywords": [
 		"node",
-		"hyperdev",
 		"express"
 	],
 	"license": "MIT"
